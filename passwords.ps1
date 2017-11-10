@@ -1,4 +1,5 @@
 # Generates 10 Office 365-style random passwords
+# I found this on a forum somewhere and stole it.
 
 Function Generate365PW
 {
