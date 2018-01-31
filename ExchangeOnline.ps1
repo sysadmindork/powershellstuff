@@ -1,4 +1,5 @@
 #  Exchange Online Powershell Hooker-upper
+# Requires msonline, azuread
 
 # Get creds from the user
 
