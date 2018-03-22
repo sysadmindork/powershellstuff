@@ -1,9 +1,9 @@
 
-# Get members of New Faculty and Staff Users who are more than 90 days old and removes them from the group
+# Get members of New Employee group who are more than 90 days old and removes them from the group
 # 
 
 
-$group = get-adgroup 'test new faculty and staff users'
+$group = get-adgroup 'New Hires'
 
  $user_list = Get-ADGroupMember $group | foreach-object { 
 	Get-ADUser -Identity $_.samaccountname -Properties whencreated | Where-Object {$_.whenCreated -lt ((Get-Date).AddDays(-90)).Date} | select -property samaccountname, name, whenCreated 
